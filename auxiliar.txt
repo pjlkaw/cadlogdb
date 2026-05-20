@@ -1,0 +1,11 @@
+Página de cadastro e login com acesso a página exclusiva usando 2 formas
+
+1º forma: Banco de dados MySQL
+
+2º forma: Google Auth 2.0
+
+Extra: Mesclar as duas formas na mesma aplicação
+
+Regras: 
+BootStrap Puro
+Usar um unico servidor para as 3 formas de aplicação
