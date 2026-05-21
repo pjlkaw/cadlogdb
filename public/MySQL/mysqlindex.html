@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        main {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 90vh;
+        }
+
+        section{
+            display: flex;
+            flex-direction: column;
+            height: 100px;
+            width: 300px;
+        }
+
+        div {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    
+    <main>
+        <section>
+            <div>
+                <label for="inputLogin">Login</label> <!-- Poderá ser usuario ou email-->
+                    <input id="inputLogin" type="text" placeholder="user/email">
+            </div>
+
+            <div>
+                <label for="inputPassword">Password</label>
+                    <input id="inputPassword" type="password" placeholder="***">
+            </div>
+                
+            <button id="btnSend">Send</button>
+        </section>
+    </main>
+
+
+</body>
+</html>
