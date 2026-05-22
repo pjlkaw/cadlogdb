@@ -40,12 +40,20 @@
     </style>
 </head>
 <body>
+    <h1>Create</h1>
     <main>
         <section>
             <div>
-                <a href="mysqlindexCreate.html">Create</a>
-                <a href="mysqlindexLogin.html">Login</a>
+                <label for="inputLogin">Login</label> <!-- Poderá ser usuario ou email-->
+                    <input id="inputLogin" type="text" placeholder="user/email">
             </div>
+
+            <div>
+                <label for="inputPassword">Password</label>
+                    <input id="inputPassword" type="password" placeholder="***">
+            </div>
+                
+            <button id="btnSend">Send</button>
         </section>
     </main>
 
