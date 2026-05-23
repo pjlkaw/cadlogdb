@@ -4,12 +4,12 @@ const path = require('path')
 const app = express()
 app.use(express.static('public'));
 
-app.get('/', (res,req)=>{
+app.get('/', (req,res)=>{
     res.sendFile(path.join(__dirname, 'index.html'))
 })
 
-app.get('/mysql', (res, req)=>{
-    res.sendFile(path.join(__dirname, '/mysql.html'))
+app.get('/mysql', (req, res)=>{
+    res.sendFile(path.join(__dirname, 'public', 'MySQL', 'mysqlindex.html'))
 })
 
 app.listen(3000, ()=>{
