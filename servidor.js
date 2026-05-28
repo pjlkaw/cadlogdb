@@ -32,7 +32,8 @@ app.post('/api', (req,res)=>{
             mensagem: 'ok'
         })
     })
-
+    console.log(req.body);
+    
 })
 
 // PAGINAS
