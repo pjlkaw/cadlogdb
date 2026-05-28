@@ -1,3 +1,4 @@
+require('dotenv').config()
 const express = require('express')
 const path = require('path')
 const mysql = require('mysql2')
@@ -6,12 +7,13 @@ const app = express()
 app.use(express.static('public'));
 app.use(express.json());
 
-// MYSQL
+// MYSQL 
 const db = mysql.createConnection({
-    host: 'localhost',
-    user: 'root',
-    password: 'P#dro098',
-    database: 'cadlogdb'    
+    host: process.env.DB_HOST,
+    user: process.env.DB_USER,
+    password: 'P#dro098', // process.env.DB_PASSWORD,
+    database: process.env.DB_NAME,
+    port: process.env.DB_PORT
 })
 db.connect((err)=>{
     if(err){
@@ -34,6 +36,12 @@ app.post('/api', (req,res)=>{
     })
     console.log(req.body);
     
+})
+app.get('/api', (req,res)=>{
+    const sql = 'SELECT * FROM users'
+    db.query(sql, (err, result)=>{
+        res.json(result)
+    })
 })
 
 // PAGINAS
